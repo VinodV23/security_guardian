@@ -1,0 +1,17 @@
+# ── Core ─────────────────────────────────────
+google-genai>=1.0.0
+python-dotenv>=1.0.0
+
+# ── Linting & Formatting ─────────────────────
+flake8>=7.0.0
+isort>=5.13.0
+black>=23.9.1
+mypy>=1.9.2
+
+# ── Future: Streamlit UI ─────────────────────
+# Uncomment when you start Phase 2
+# streamlit>=1.32.0
+
+# ── Future: Notion Integration ───────────────
+# Uncomment when you start Phase 3
+# notion-client>=2.2.0

@@ -1,0 +1,33 @@
+# ── Environment & Secrets ────────────────────
+.env
+.env.*
+!.env.example
+*.key
+
+# ── Python ───────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.venv/
+venv/
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+
+# ── Output files ─────────────────────────────
+last_review.json
+
+# ── OS ───────────────────────────────────────
+.DS_Store
+Thumbs.db
+
+# ── IDE ──────────────────────────────────────
+.vscode/
+.idea/
+*.swp
