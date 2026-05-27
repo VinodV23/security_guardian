@@ -9,13 +9,13 @@ cd "$(dirname "$0")"
 echo "=== isort ==="
 python3 -m isort .
 
-echo "\n=== black ==="
+echo "=== black ==="
 python3 -m black .
 
-echo "\n=== flake8 ==="
+echo "=== flake8 ==="
 python3 -m flake8 .
 
-echo "\n=== mypy ==="
+echo "=== mypy ==="
 python3 -m mypy .
 
-echo "\nAll checks complete."
+echo "All checks complete."

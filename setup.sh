@@ -1,6 +1,6 @@
 #!/bin/bash
 # ──────────────────────────────────────────────
-# Security Guardian — Dev Environment Setup
+# SecGuard — Dev Environment Setup
 # Run once when cloning the repo: bash setup.sh
 # ──────────────────────────────────────────────
 
@@ -8,7 +8,7 @@ set -euo pipefail
 
 echo ""
 echo "──────────────────────────────────────────"
-echo "  Security Guardian — Environment Setup"
+echo "  SecGuard — Environment Setup"
 echo "──────────────────────────────────────────"
 
 # Move to script directory
@@ -75,7 +75,7 @@ if [ ! -f ".env" ]; then
     echo "▸ Creating .env template..."
 
     cat > .env << 'EOF'
-# ── Security Guardian Environment Variables ──
+# ── SecGuard Environment Variables ──
 GEMINI_API_KEY=your_api_key_here
 EOF
 
