@@ -18,12 +18,25 @@ cd "$(dirname "$0")"
 echo ""
 echo "▸ Checking Python version..."
 
-if ! command -v python3 >/dev/null 2>&1; then
-    echo "❌ Python3 not found. Install Python first."
+if command -v python3.14 >/dev/null 2>&1; then
+    PYTHON_CMD="python3.14"
+elif command -v python3 >/dev/null 2>&1; then
+    PYTHON_CMD="python3"
+else
+    echo "Python not found."
     exit 1
 fi
 
-python3 --version
+PYTHON_VERSION=$($PYTHON_CMD -c 'import sys; print(f"{sys.version_info.major}.{sys.version_info.minor}")')
+
+echo "Using Python $PYTHON_VERSION"
+
+# Require Python 3.10+
+
+if ! $PYTHON_CMD -c "import sys; sys.exit(0 if sys.version_info >= (3,10) else 1)"; then
+    echo "❌ Python 3.10+ required."
+    exit 1
+fi
 
 # ── 2. Create virtual environment ────────────
 echo ""
